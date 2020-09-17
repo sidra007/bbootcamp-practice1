@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name:bootcamp-practice1
+name: bootcamp-practice1
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -24,10 +24,10 @@ jobs:
       - name: installing node
         uses: actions/setup-node@v2-beta
         with:
-        node-version: 12
+          node-version: 12
         
       # Runs a set of commands using the runners shell
-      - name: installing surge
+      - name: installing surge 
         run: npm install -g surge
-      -name: deploying surge
-        run: surge ./ bootcamp-practice1.surge.sh --token ${{secrets.TOKEN1}}
+      - name: deploying surge
+         run: surge ./ bootcamp-practice1.surge.sh --token ${{secrets.TOKEN1}}
